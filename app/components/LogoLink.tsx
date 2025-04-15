@@ -1,22 +1,19 @@
-import type { FC } from "react";
-import Image from "next/image";
-import { withBasePath } from "../utils/deepgramUtils";
+import { type FC } from "react";
+import Link from "next/link";
 
 interface Props {
   href: string;
 }
 
-const LogoLink: FC<Props> = ({ href }) => (
-  <a className="flex items-center" href={href}>
-    <Image
-      className="w-auto h-6 max-w-[12.5rem] sm:max-w-none"
-      src={withBasePath("/deepgram.svg")}
-      alt="Deepgram Logo"
-      width={0}
-      height={0}
-      priority
-    />
-  </a>
-);
+const LogoLink: FC<Props> = ({ href }) => {
+  return (
+    <></>
+    // <Link href={href}>
+    //   <div className="flex items-center gap-2">
+    //     <span className="text-white/90 text-lg font-medium">Voice Agent</span>
+    //   </div>
+    // </Link>
+  );
+};
 
 export default LogoLink;

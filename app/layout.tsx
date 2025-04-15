@@ -8,6 +8,7 @@ import AnimatedBackground from "./components/AnimatedBackground";
 
 import "./globals.css";
 import { sharedOpenGraphMetadata } from "./lib/constants";
+import { Metadata } from "next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,10 +27,10 @@ const favorit = localFont({
   display: "fallback",
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_PATH || "http://localhost:3000"),
-  title: "Voice Agent | Deepgram",
-  description: "Meet Deepgram's Voice Agent API",
+  title: "Voice Agent Demo",
+  description: "Interactive Voice Agent Demo",
   openGraph: sharedOpenGraphMetadata,
   twitter: {
     card: "summary_large_image",

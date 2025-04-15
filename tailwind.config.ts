@@ -17,6 +17,11 @@ export default {
         fira: ["var(--font-fira)", "monospace"],
       },
       colors: {
+        primary: {
+          DEFAULT: '#4B5FFA',
+          hover: '#3A4CDF',
+          light: '#E8EBFF',
+        },
         gray: {
           25: "#FBFBFF",
           200: "#E1E1E5",
@@ -30,11 +35,19 @@ export default {
           1000: "#0B0B0C",
         },
         blue: {
-          link: "#79AFFA",
+          link: '#4B5FFA',
         },
         green: {
           spring: "#13EF93",
         },
+        background: {
+          DEFAULT: '#FFFFFF',
+          dark: '#F7F9FC',
+        },
+        text: {
+          primary: '#111827',
+          secondary: '#6B7280',
+        }
       },
     },
   },

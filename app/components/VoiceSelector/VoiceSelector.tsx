@@ -73,58 +73,59 @@ const VoiceSelector: FC<Props> = ({ className = "", showLabel, collapsible }) =>
     : "";
 
   return (
-    <div className={`${className} ${collapsedBackgroundClassName}`}>
-      {showLabel && <div className="text-gray-450 text-sm mr-2">Voices:</div>}
-      <ul className={voicesListClassName}>
-        {sortedVoices.map((voice, i) => (
-          <li
-            className={voiceListItemClassName(voice)}
-            key={voice.name}
-            style={
-              collapsible && isOpen
-                ? {
-                    paddingLeft: i * 40,
-                  }
-                : {}
-            }
-          >
-            <button
-              className={styles["voice-list__icon"]}
-              onClick={handleVoiceIconClick}
-              value={voice.canonical_name}
-              style={
-                // Border is hidden for unselected hidden voices to prevent the border height from impacting the close/open transitions
-                !collapsible || isOpen || isSelected(voice)
-                  ? {
-                      border: `2px solid ${voice.metadata.color}`,
-                    }
-                  : {}
-              }
-            >
-              <Image
-                src={voice.metadata.image}
-                alt={voice.name}
-                width={80}
-                height={80}
-                className="rounded-full object-scale-down"
-                priority
-              />
-            </button>
+    <></>
+    // <div className={`${className} ${collapsedBackgroundClassName}`}>
+    //   {showLabel && <div className="text-gray-450 text-sm mr-2">Voices:</div>}
+    //   <ul className={voicesListClassName}>
+    //     {sortedVoices.map((voice, i) => (
+    //       <li
+    //         className={voiceListItemClassName(voice)}
+    //         key={voice.name}
+    //         style={
+    //           collapsible && isOpen
+    //             ? {
+    //                 paddingLeft: i * 40,
+    //               }
+    //             : {}
+    //         }
+    //       >
+    //         <button
+    //           className={styles["voice-list__icon"]}
+    //           onClick={handleVoiceIconClick}
+    //           value={voice.canonical_name}
+    //           style={
+    //             // Border is hidden for unselected hidden voices to prevent the border height from impacting the close/open transitions
+    //             !collapsible || isOpen || isSelected(voice)
+    //               ? {
+    //                   border: `2px solid ${voice.metadata.color}`,
+    //                 }
+    //               : {}
+    //           }
+    //         >
+    //           <Image
+    //             src={voice.metadata.image}
+    //             alt={voice.name}
+    //             width={80}
+    //             height={80}
+    //             className="rounded-full object-scale-down"
+    //             priority
+    //           />
+    //         </button>
 
-            <div className={styles["voice-list__info"]}>
-              <span className="capitalize font-semibold md:font-normal text-gray-200 md:text-gray-25">
-                {voice.name}
-                <span className="hidden md:inline">.</span>{" "}
-              </span>
-              <span className="whitespace-nowrap text-gray-450 md:text-gray-25">
-                <span className="capitalize">{voice.metadata.accent}</span>{" "}
-                <span className="lowercase">{voice.metadata.gender}</span>
-              </span>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+    //         <div className={styles["voice-list__info"]}>
+    //           <span className="capitalize font-semibold md:font-normal text-gray-200 md:text-gray-25">
+    //             {voice.name}
+    //             <span className="hidden md:inline">.</span>{" "}
+    //           </span>
+    //           <span className="whitespace-nowrap text-gray-450 md:text-gray-25">
+    //             <span className="capitalize">{voice.metadata.accent}</span>{" "}
+    //             <span className="lowercase">{voice.metadata.gender}</span>
+    //           </span>
+    //         </div>
+    //       </li>
+    //     ))}
+    //   </ul>
+    // </div>
   );
 };
 

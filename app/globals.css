@@ -10,32 +10,36 @@ body {
   overflow-y: auto;
   height: 100%;
   width: 100%;
-  background: black;
+  background: theme('colors.background.DEFAULT');
+  color: theme('colors.text.primary');
+  font-family: theme('fontFamily.inter');
 }
 
 h2 {
   font-size: 26px;
+  font-weight: 600;
+  color: theme('colors.text.primary');
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-gray-900;
+  @apply bg-background-dark;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-700;
-  border-radius: 2px;
+  @apply bg-gray-350;
+  border-radius: 4px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  @apply bg-gray-450;
 }
 
 /* Speech Bubbles Scroll Element */
@@ -58,8 +62,9 @@ h2 {
   height: 100px;
   left: 0px;
   top: 0px;
-  background: #232329;
-  border-radius: 60px;
+  background: theme('colors.background.dark');
+  border-radius: 12px;
+  border: 1px solid theme('colors.gray.200');
 }
 
 .speech-bubble::after {
@@ -70,8 +75,8 @@ h2 {
   left: 170px;
   top: 95px;
   border-style: solid;
-  border-width: 20px 20px 0 20px;
-  border-color: #232329 transparent transparent transparent;
+  border-width: 12px 12px 0 12px;
+  border-color: theme('colors.background.dark') transparent transparent transparent;
   transform: translateX(15%) rotate(-135deg);
 }
 

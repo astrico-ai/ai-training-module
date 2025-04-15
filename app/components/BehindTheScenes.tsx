@@ -41,7 +41,7 @@ function BehindTheScenes({ onClose }: BehindTheScenesProps) {
         >
           <XMarkIcon />
         </button>
-        <div className="flex justify-center py-4 mx-8 text-[14px] text-gray-450">Backstage:</div>
+        {/* <div className="flex justify-center py-4 mx-8 text-[14px] text-gray-450">Backstage:</div> */}
 
         <div
           ref={scrollRef}
