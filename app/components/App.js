@@ -4,7 +4,6 @@ import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 
-import Transcript from "./Transcript";
 import { useDeepgram } from "../context/DeepgramContextProvider";
 import { useMicrophone } from "../context/MicrophoneContextProvider";
 import { EventType, useVoiceBot, VoiceBotStatus } from "../context/VoiceBotContextProvider";
@@ -469,7 +468,7 @@ export const App = ({
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
         {/* Left Column - AI Customer */}
-        <div className="bg-[#1e2642] rounded-2xl overflow-hidden h-full">
+        <div className="bg-[#1e2642] rounded-2xl overflow-hidden max-h-full">
           <div className="p-4 flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-[#6c5dd3] flex items-center justify-center">
               <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -564,7 +563,7 @@ export const App = ({
             <div className="text-base text-white/80 text-center w-full mt-6 mb-8">Loading microphone...</div>
           ) : (
             <Fragment>
-              {socketState === -1 && requiresUserActionToInitialize && (
+              {/* {socketState === -1 && requiresUserActionToInitialize && (
                 <div className="text-center mb-8">
                   <button 
                     onClick={handleVoiceBotAction}
@@ -573,7 +572,7 @@ export const App = ({
                     Start Training
                   </button>
                 </div>
-              )}
+              )} */}
               {socketState === 0 && (
                 <div className="text-base text-white/80 text-center w-full mt-6 mb-8">
                   Loading Astrico...
