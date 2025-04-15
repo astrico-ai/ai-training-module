@@ -8,7 +8,7 @@ import AnimatedBackground from "./components/AnimatedBackground";
 
 import "./globals.css";
 import { sharedOpenGraphMetadata } from "./lib/constants";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 const inter = Inter({
   subsets: ["latin"],
