@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useVoiceBot, VoiceBotStatus } from "../../context/VoiceBotContextProvider";
+// import { useVoiceBot, VoiceBotStatus } from "../../context/VoiceBotContextProvider";
 
 export const VoiceSelector = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const { status } = useVoiceBot();
+  // const { status } = useVoiceBot();
 
   const handleBackgroundClick = () => {
     setIsExpanded(false);
