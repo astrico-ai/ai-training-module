@@ -74,7 +74,7 @@ const VoiceSelector: FC<Props> = ({ className = "", showLabel, collapsible }) =>
 
   return (
     <div className={`${className} ${collapsedBackgroundClassName}`}>
-      {showLabel && <div className="text-gray-450 text-sm mr-2">Voices:</div>}
+      {/* {showLabel && <div className="text-gray-450 text-sm mr-2">Voices:</div>}
       <ul className={voicesListClassName}>
         {sortedVoices.map((voice, i) => (
           <li
@@ -123,7 +123,7 @@ const VoiceSelector: FC<Props> = ({ className = "", showLabel, collapsible }) =>
             </div>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };

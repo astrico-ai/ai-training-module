@@ -29,12 +29,12 @@ const DesktopMenuItems = () => {
   const { prompt } = useStsQueryParams();
   return (
     <>
-      <PopupButton
+      {/* <PopupButton
         buttonIcon={<PencilIcon />}
         buttonText={<span>Prompt {prompt && <span className="text-green-spring">*</span>}</span>}
         popupContent={<InstructionInput className="w-96" focusOnMount />}
         tooltipText={prompt ? "Using your custom prompt. Click to edit." : null}
-      />
+      /> */}
     </>
   );
 };
@@ -88,24 +88,24 @@ export default function Home() {
                 status !== VoiceBotStatus.NONE && (
                   <div>
                     {/* Desktop */}
-                    <div className="hidden md:flex justify-center text-gray-450">Try saying:</div>
-                    <div className="hidden md:grid max-w-max mx-auto grid-cols-3 gap-4 mt-6 relative">
+                    {/* <div className="hidden md:flex justify-center text-gray-450">Try saying:</div> */}
+                    {/* <div className="hidden md:grid max-w-max mx-auto grid-cols-3 gap-4 mt-6 relative">
                       <PromptSuggestions />
-                    </div>
+                    </div> */}
                     {/* Mobile */}
-                    <div className="flex md:hidden justify-center text-gray-450 mt-2">
+                    {/* <div className="flex md:hidden justify-center text-gray-450 mt-2">
                       Try saying:
                     </div>
                     <div className="scrollable-element w-full flex md:hidden gap-4 items-center mt-4 overflow-x-auto -mr-10">
                       <PromptSuggestions />
-                    </div>
+                    </div> */}
                   </div>
                 )}
             </div>
           </div>
 
           {/* Right Panel (Desktop only) */}
-          <div
+          {/* <div
             className="hidden md:block p-6 pl-0 max-h-screen overflow-hidden"
             style={{ zIndex: 11 }}
           >
@@ -125,7 +125,7 @@ export default function Home() {
                 </>
               )}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

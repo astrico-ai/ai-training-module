@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Header: FC<Props> = ({ logoHref }) => {
-  const title = "Deepgram Voice Agent Demo";
+  const title = "";
 
   return (
     <>
